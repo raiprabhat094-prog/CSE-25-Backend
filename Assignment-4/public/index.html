@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>Campus Help Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Campus Help Desk home">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span>Campus<span class="brand-light">Care</span></span>
+      </a>
+      <span class="topbar-note"><span class="online-dot"></span> Student support portal</span>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> HERE FOR YOUR CAMPUS LIFE</p>
+          <h1 id="page-title">A little help<br />goes a <span>long way.</span></h1>
+          <p class="hero-description">Something on campus need attention? Tell us about it. We’ll make sure it gets to the right people.</p>
+          <div class="hero-footnote"><span class="sparkle">✳</span> Your campus, working better together.</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="art-card card-back"></div>
+          <div class="art-card card-front">
+            <div class="card-icon">✓</div>
+            <div class="card-lines"><span></span><span></span><span></span></div>
+            <div class="card-status"><span></span> On its way</div>
+          </div>
+          <div class="art-star star-one">✳</div><div class="art-star star-two">✳</div>
+          <div class="art-blob"></div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Submit and manage campus requests">
+        <form class="request-form panel" id="request-form">
+          <div class="panel-heading">
+            <div><p class="section-kicker">TELL US WHAT'S UP</p><h2 id="form-title">Send a request</h2></div>
+            <span class="heading-icon" aria-hidden="true">↗</span>
+          </div>
+          <label for="studentName">Your name</label>
+          <input id="studentName" name="studentName" type="text" placeholder="e.g. Alex Morgan" maxlength="80" autocomplete="name" required />
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@university.edu" maxlength="120" autocomplete="email" required />
+          <div class="field-row">
+            <div class="field-group"><label for="category">What's it about?</label>
+              <select id="category" name="category" required>
+                <option value="" disabled selected>Choose a category</option>
+                <option>Facilities</option><option>IT Support</option><option>Campus Safety</option><option>Academics</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field-group"><label for="priority">How urgent?</label>
+              <select id="priority" name="priority" required>
+                <option value="" disabled selected>Set priority</option>
+                <option>Low</option><option>Medium</option><option>High</option>
+              </select>
+            </div>
+          </div>
+          <label for="description">Tell us a little more</label>
+          <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="What happened, and where? The more detail, the better…" required></textarea>
+          <div class="form-footer"><span class="form-hint">We’ll follow up by email.</span><div class="form-actions"><button class="button button-quiet hidden" id="cancel-edit" type="button">Cancel</button><button class="button button-primary" id="submit-button" type="submit">Send request <span aria-hidden="true">→</span></button></div></div>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="requests-panel" aria-labelledby="requests-title">
+          <div class="requests-heading"><div><p class="section-kicker">THE CAMPUS PULSE</p><h2 id="requests-title">Your requests</h2></div><span class="request-count" id="request-count">0</span></div>
+          <p class="requests-intro">See what’s been reported and keep track of your own requests.</p>
+          <div class="request-list" id="request-list" aria-live="polite"><div class="loading-state">Loading requests<span class="loading-dots">...</span></div></div>
+          <div class="list-footnote"><span class="tiny-lock" aria-hidden="true">◎</span> Your requests stay on this campus dashboard.</div>
+        </section>
+      </section>
+      <footer class="page-footer"><span>CampusCare <span id="year"></span></span><span>Small fixes. Better days.</span></footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "campus-help-desk",
+  "version": "1.0.0",
+  "description": "Campus Help Desk request management mini project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
