@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f6f2" />
+  <title>Local File Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#top"><span class="brand-icon">F</span><span>file<span class="brand-light">room</span></span></a><span class="server-status"><span class="status-dot"></span> Your local library</span></header>
+  <main id="top" class="shell">
+    <section class="hero"><div><p class="eyebrow">A LITTLE SPACE FOR YOUR FILES</p><h1>Everything you need,<br /><span>right where you left it.</span></h1><p class="intro">Add files from your computer, find them in a moment, and download them whenever you need.</p></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="folder">↗</div><span class="float-file file-a">PDF</span><span class="float-file file-b">PNG</span><span class="float-file file-c">TXT</span></div></section>
+    <section class="workspace">
+      <section class="upload panel" aria-labelledby="upload-title"><div class="panel-title"><div><p class="kicker">FROM YOUR COMPUTER</p><h2 id="upload-title">Add to your library</h2></div><span class="round-icon">＋</span></div>
+        <label class="drop-zone" id="drop-zone" for="file-input"><span class="upload-symbol">↑</span><strong>Choose files to upload</strong><span>or drop them here · up to 100 MB each</span><input id="file-input" type="file" multiple /></label>
+        <p class="message" id="upload-message" role="status" aria-live="polite"></p><div class="storage-note"><span>▣</span> Saved on this computer in <code>Assignment-5/files</code></div>
+      </section>
+      <section class="library" aria-labelledby="library-title"><div class="library-heading"><div><p class="kicker">YOUR COLLECTION</p><h2 id="library-title">Files <span class="count" id="file-count">0</span></h2></div><button class="refresh" id="refresh-button" type="button" aria-label="Refresh files">↻</button></div>
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search your files..." autocomplete="off" /><kbd>/</kbd></label>
+        <div class="file-list" id="file-list" aria-live="polite"><div class="loading">Looking for your files...</div></div>
+        <p class="library-footnote">Files are served by the local server running on your computer.</p>
+      </section>
+    </section>
+    <footer>Made for your desktop <span>✳</span></footer>
+  </main>
+</body>
+</html>
